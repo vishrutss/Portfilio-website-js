@@ -339,6 +339,16 @@
                     <p>Developed a program to represent a race car going around a racetrack. Used
                         OpenGL functions for different shapes and movement of objects like the race car, road, and elements in the background. Also,
                         showed the race car from different angles by pressing certain keys on the keyboard, using transformation techniques.
+                        Many different shapes are put together to form the shape of a race car. Rectangles, cones and circles for the car's
+                        chasis and many other shapes for the background like trees, scenery, race track, etc.
+                    </p>
+                    <p>
+                        Different angles/perspectives are aloso provided in this project. When the user presses the following buttons various actions are performed.
+
+                        <p>Press H -> Helicopter view (View the car from the top)</p>
+                        <p>Press B -> Back view (View the car from behind)</p>
+                        <p>Press F -> Front view (View the car from the front)</p>
+                        <p>Press S -> Side view (View the car from the side)</p>
                     </p>
                     <p>Tech: C, OpenGL functions</p>
                     <div style="text-align:center">
@@ -351,8 +361,49 @@
                         <h4 class="font-weight-bold m-0">Driver Drowsiness Detection</h4>
                     </div>
                     <p>Designed a program to detect the drowsiness of a driver using Viola
-                        Jones image detection algorithm with the selection of the eyes and mouth. Also, added a probability function to avoid wrong
-                        detection by the program.</p>
+                        Jones image detection algorithm with the selection of the eyes and mouth. There are 2 seperate functions that check the eyes and the mouth.
+                        Eye detection is done by looking for 2 dark spots(the eyes) split by a bright spot(the nose) since eyes look darker than the nose and cheeks on video.
+                    </p>
+                    <p>
+                        Here the program checks if the eyes are open or closing. It checks the amount of white pixels present whithin the area it perceives as the eyes. If there are a 
+                        considerable amount of white pixels it means that the eyes are open otherwise the eyes are closed.
+                    </p>
+                    <p>Mouth detection is done similar to that of the eyes. The program looks for 2 dark spots(the eyes and the mouth) and a bridge in between(the nose and cheeks). The program
+                    checks if the mouth is open by checking if the lips are parted and there are a considerable amount of white pixels between the lips(the teeth). If the lips
+                    are parted this means that the driver is yawning/talking.
+                    </p>
+                    <p>
+                        These 2 programs are then combined to create a probability function to avoid wrong detection. The probability values are as follows
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Mouth</th>
+                                <th>Closing</th>
+                                <th>Split</th>
+                            </tr>
+                            <tr>
+                                <th>Eyes</th>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Open</th>
+                                <td>100%</th>
+                                <td>84%</th>
+                            </tr>
+                            <tr>
+                                <th>Close</th>
+                                <td>50%</th>
+                                <td>15%</th>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        Once the probability has been determined a random number is generated and the application checks in what range the number falls.
+                        It then gives the final verdict wheter the driver is drowsy or awake. Since the program runs a check constantly every second there is a very low chance
+                        of the application performing a wrong prediction constantly for a long period of time.
+                    </p>
                     <div style="text-align:center">
                         <a class="border-bottom border-primary text-decoration-none" href=""></a>
                     </div>
@@ -363,7 +414,8 @@
                         <h4 class="font-weight-bold m-0">Twitter Integration Application</h4>
                     </div>
                     <p>Implemented twitter’s REST API functions to build an
-                        application that can login to a user’s Twitter account and view their timeline, search for tweets and post tweets.
+                        application that can login to a user’s Twitter account and view their timeline, search for tweets and post tweets. Created a Web Application by using various JSP pages
+                        and created servlets to manage various functions like display timeline, search tweets and post tweets.
                     </p>
                     <p>
                         Tech: Java, Eclipse IDE
@@ -378,13 +430,35 @@
                         <h4 class="font-weight-bold m-0">Flight Booking Database System</h4>
                     </div>
                     <p>Designed a database system for storing user’s flight
-                        information such as name, address, destination in the database, using visual studio.
+                        information such as name, address, destination in the database, using visual studio. Used user's name and Contact number as Primary keys.
+                    </p>
+                    <p>The user has to choose from booking a flight or Cancel a booked flight.
+                        If the user wishes to book a flight ticket the user is prompted to enter relevent details like Name, Address, Contact details,
+                        Departure location, Destination location. After the user enters the required data the information is stored in a database.
                     </p>
                     <p>
-                        Tech: C#, MySQL
+                        If the user wishes to cancel a flight they have to enter their name, email and flight details. The application will then remove the user's data from the database.
+                    </p>
+                    <p>
+                        Tech: C#, MySQL, VS CODE
                     </p>
                     <div style="text-align:center">
                         <a class="border-bottom border-primary text-decoration-none" href="https://github.com/vishrutss/Flight-booking-management-system">Link to GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-6 text-left mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Compiler Design Mini Project</h4>
+                    </div>
+                    <p>
+                        Designed a compiler for a particular pseudo code. Designed lexical and parser code to compile the given pseudo code.
+                    </p>
+                    <p>
+                        Tech: C
+                    </p>
+                    <div style="text-align:center">
+                        <a class="border-bottom border-primary text-decoration-none" href=""></a>
                     </div>
                 </div>
             </div>
